@@ -12,27 +12,27 @@ class DetailJurusanActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail_jurusan)
 
-        val gambar = findViewById<ImageView>(R.id.detailImage)
-        val jurusan = findViewById<TextView>(R.id.detailTitle)
-        val deskripsi = findViewById<TextView>(R.id.detailDesc)
-        val fasilitas = findViewById<TextView>(R.id.detailFacility)
-        val peluangkerja = findViewById<TextView>(R.id.detailCareer)
+        val tampilGambar = findViewById<ImageView>(R.id.detailGambar)
+        val tampilJurusan = findViewById<TextView>(R.id.detailJurusan)
+        val tampilDeskripsi = findViewById<TextView>(R.id.detailDeskripsi)
+        val tampilFasilitas = findViewById<TextView>(R.id.detailFasilitas)
+        val tampilPeluangkerja = findViewById<TextView>(R.id.detailPeluangkerja)
 
-        val programTitle = intent.getStringExtra("title")
-        val programDesc = intent.getStringExtra("desc")
-        val imageRes = intent.getIntExtra("imageRes", 0)
-        val programFacility = intent.getStringExtra("facility")
-        val programCareer = intent.getStringExtra("career")
+        val jurusan = intent.getStringExtra("jurusan")
+        val deskripsi = intent.getStringExtra("deskripsi")
+        val gambar = intent.getIntExtra("gambar", 0)
+        val fasilitas = intent.getStringExtra("fasilitas")
+        val peluangkerja = intent.getStringExtra("peluangkerja")
 
-        title.text = programTitle
-        desc.text = programDesc
-        facility.text = "Fasilitas: ${programFacility ?: "-"}"
-        career.text = "Peluang Kerja: ${programCareer ?: "-"}"
+        tampilJurusan.text = jurusan
+        tampilDeskripsi.text = deskripsi
+        tampilFasilitas.text = "Fasilitas: ${fasilitas ?: "-"}"
+        tampilPeluangkerja.text = "Peluang Kerja: ${peluangkerja ?: "-"}"
 
-        if (imageRes != 0) {
-            img.setImageResource(imageRes)
+        if (gambar != 0) {
+            tampilGambar.setImageResource(gambar)
         } else {
-            img.setImageResource(R.drawable.ic_smkn1ap)
+            tampilGambar.setImageResource(R.drawable.ic_smkn1ap)
         }
 
     }
