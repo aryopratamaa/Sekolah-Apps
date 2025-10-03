@@ -34,6 +34,5 @@ class DetailJurusanActivity : AppCompatActivity() {
         } else {
             tampilGambar.setImageResource(R.drawable.ic_smkn1ap)
         }
-
     }
 }
