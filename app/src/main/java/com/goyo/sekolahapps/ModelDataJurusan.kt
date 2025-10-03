@@ -5,5 +5,8 @@ data class ModelDataJurusan(
     val deskripsi: String,
     val gambar: Int,
     val fasilitas: String,
-    val peluangkerja: String
+    val peluangkerja: String,
+    val whatsapp: String,
+    val instagram: String,
+    val facebook: String
 )

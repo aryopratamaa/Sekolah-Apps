@@ -1,6 +1,9 @@
 package com.goyo.sekolahapps
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -31,12 +34,32 @@ class DetailJurusanActivity : AppCompatActivity() {
         tampilDeskripsi.text = deskripsi
         tampilFasilitas.text = "Fasilitas: ${fasilitas ?: "-"}"
         tampilPeluangKerja.text = "Peluang Kerja: ${peluangKerja ?: "-"}"
+        tampilGambar.setImageResource(gambar)
 
-        // Tampilkan gambar (pakai default kalau kosong)
-        if (gambar != 0) {
-            tampilGambar.setImageResource(gambar)
-        } else {
-            tampilGambar.setImageResource(R.drawable.ic_smkn1ap)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            finish()
+        }
+
+        val btnInstagram = findViewById<ImageView>(R.id.btnInstagram)
+        val instagram = intent.getStringExtra("instagram")
+        btnInstagram.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(instagram))
+            startActivity(intent)
+        }
+
+        val btnWhatsapp = findViewById<ImageView>(R.id.btnWhatsapp)
+        val whatsapp = intent.getStringExtra("whatsapp")
+        btnWhatsapp.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(whatsapp))
+            startActivity(intent)
+        }
+
+        val btnFacebook = findViewById<ImageView>(R.id.btnFacebook)
+        val facebook = intent.getStringExtra("facebook")
+        btnFacebook.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(facebook))
+            startActivity(intent)
         }
     }
 }
