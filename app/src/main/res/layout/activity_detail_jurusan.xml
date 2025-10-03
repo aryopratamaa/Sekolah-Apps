@@ -125,7 +125,7 @@
                 app:cardCornerRadius="200dp">
 
                 <ImageView
-                    android:id="@+id/detailImage"
+                    android:id="@+id/detailGambar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
@@ -133,7 +133,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/detailTitle"
+                android:id="@+id/detailJurusan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -142,14 +142,14 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailDesc"
+                android:id="@+id/detailDeskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Deskripsi lengkap..." />
 
             <TextView
-                android:id="@+id/detailFacility"
+                android:id="@+id/detailFasilitas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -157,7 +157,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailCareer"
+                android:id="@+id/detailPeluangkerja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

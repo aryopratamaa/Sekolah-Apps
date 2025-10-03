@@ -12,11 +12,11 @@ class DetailJurusanActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail_jurusan)
 
-        val img = findViewById<ImageView>(R.id.detailImage)
-        val title = findViewById<TextView>(R.id.detailTitle)
-        val desc = findViewById<TextView>(R.id.detailDesc)
-        val facility = findViewById<TextView>(R.id.detailFacility)
-        val career = findViewById<TextView>(R.id.detailCareer)
+        val gambar = findViewById<ImageView>(R.id.detailImage)
+        val jurusan = findViewById<TextView>(R.id.detailTitle)
+        val deskripsi = findViewById<TextView>(R.id.detailDesc)
+        val fasilitas = findViewById<TextView>(R.id.detailFacility)
+        val peluangkerja = findViewById<TextView>(R.id.detailCareer)
 
         val programTitle = intent.getStringExtra("title")
         val programDesc = intent.getStringExtra("desc")
